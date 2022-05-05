@@ -1,7 +1,7 @@
 import pandas as pd
 import plotly.express as px
 
-df2 = pd.read_csv("Diversity2.csv")
+df2 = pd.read_csv("CMPSCCapstone/CSV Files/Diversity2.csv")
 
 df2 = df2.groupby(['School','Black'], as_index=False)[['School']].sum()
 # df = df.groupby(['School','White']).sum().plot(kind='bar')
@@ -18,4 +18,4 @@ barchart2 = px.bar(
     orientation="v",
     barmode='overlay')
 
-barchart2
+barchart2.show()
