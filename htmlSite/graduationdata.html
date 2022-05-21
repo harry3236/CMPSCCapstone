@@ -56,7 +56,26 @@ body {
 <div class="main">
   <h2>Gradutation Data</h2>
 </div>
+<div style = "position:relative; left: 160px;">
+  <label for="Title">Choose dataset:</label>
+  <select id="year" onchange="getSelectValue();">
+    <option value="C:/Users/Harri/Desktop/RedliningInLincoln/python/CMPSCCapstone/htmlSite/Visualizations/CollegeAttendance2016.html">2016</option>
+    <option value="C:/Users/Harri/Desktop/RedliningInLincoln/python/CMPSCCapstone/htmlSite/Visualizations/CollegeAttendance2017.html">2017</option>
+    <option value="C:/Users/Harri/Desktop/RedliningInLincoln/python/CMPSCCapstone/htmlSite/Visualizations/CollegeAttendance2018.html" >2018</option>
+    <option value="C:/Users/Harri/Desktop/RedliningInLincoln/python/CMPSCCapstone/htmlSite/Visualizations/CollegeAttendance2019.html">2019</option>
+  </select>
+</div>
 
+<script>
+  function getSelectValue(){
+    var selectedValue = document.getElementById("year").value;
+    document.getElementById("graph").src = selectedValue;
+  }
+</script>
+
+<div style = "position:relative; left: 160px;">
+  <iframe src="" height="800" width="1200" id="graph"></iframe>
+</div>
 
 
 </body>
